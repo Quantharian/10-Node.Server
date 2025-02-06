@@ -4,16 +4,17 @@
     "main": "index.js",
     "type": "module",
     "scripts": {
-        "start": "node ./dist/index.js",
-        "start:dev": "cross-env NODE_ENV=dev DEBUG=app:* node --watch --env-file=.env ./dist/index.js",
+        "start": "node dist/index.js",
+        "start:dev": "cross-env NODE_ENV=dev DEBUG=app* node --watch --env-file=.env ./dist/index.js",
         "build": "tsc -w",
         "test": "vitest run",
         "test:c": "vitest run --coverage",
-        "lint": "eslint ."
+        "lint": "eslint . --ext .ts"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
+    "description": "",
     "prettier": {
         "singleQuote": true
     },
@@ -33,6 +34,5 @@
         "cross-env": "^7.0.3",
         "debug": "^4.4.0",
         "dotenv": "^16.4.7"
-    },
-    "description": ""
+    }
 }
